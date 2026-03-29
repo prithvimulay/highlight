@@ -106,6 +106,13 @@ const injectReactApp = () => {
   // 2. Create a container for our React app
   const rootElement = document.createElement('div');
   rootElement.id = 'highlight-saver-root';
+  
+  // Apply theme class to the container so Tailwind's dark: variants work
+  const theme = getPreferredTheme();
+  if (theme === 'dark') {
+    rootElement.classList.add('dark');
+  }
+
   document.body.appendChild(rootElement);
 
   // 3. Render the app
