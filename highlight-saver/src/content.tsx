@@ -92,7 +92,7 @@ const FloatingButton = () => {
         }`}
       >
         {isSaved ? <Check size={16} /> : <Save size={16} />}
-        {isSaved ? 'Saved!' : 'Save'}
+        {isSaved ? 'Saved!' : 'Save Highlight'}
       </button>
     </div>
   );
